@@ -1,21 +1,29 @@
 // Fonction pour filtrer les cartes
-function filterCards(filter) {
-    const cards = document.querySelectorAll('.card');
+function filterCards(category) {
+    // Réinitialiser l'état des filtres
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    filterButtons.forEach(button => {
+        button.classList.remove('active'); // Enlever la classe active de tous les boutons
+    });
 
-    if (filter === 'all') {
-        cards.forEach(card => card.style.display = 'block');
-    } else {
-        cards.forEach(card => {
-            if (card.classList.contains(filter)) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
+    // Ajouter la classe active au bouton sélectionné
+    const selectedButton = document.querySelector(`.filter-btn[onclick="filterCards('${category}')"]`);
+    if (selectedButton) {
+        selectedButton.classList.add('active');
     }
+
+    // Afficher ou masquer les cartes selon la catégorie sélectionnée
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+            card.style.display = 'block';  // Afficher la carte
+        } else {
+            card.style.display = 'none';   // Masquer la carte
+        }
+    });
 }
 
-// Fonction pour afficher les compétences dans la popup spécifique
+// Fonction pour afficher les compétences dans la popup
 function showCompetences(popupId) {
     const popup = document.getElementById(popupId);
     popup.style.display = 'flex';
@@ -27,5 +35,16 @@ function closePopup(popupId) {
     popup.style.display = 'none';
 }
 
-// Afficher toutes les cartes par défaut
-window.onload = () => filterCards('all');
+// Initialisation de la page : définir "tous" comme sélectionné par défaut et afficher toutes les cartes
+document.addEventListener("DOMContentLoaded", () => {
+    // Marquer le filtre "tous" comme sélectionné par défaut
+    const allButton = document.querySelector('.filter-btn[onclick="filterCards(\'all\')"]');
+    if (allButton) {
+        allButton.classList.add('active'); // Ajouter la classe active au filtre "tous"
+    }
+
+    // Afficher toutes les cartes par défaut
+    filterCards('all');
+});
+
+

@@ -8,20 +8,30 @@
 </head>
 <body>
 
+    <!-- En-tête avec le titre principal et l'image -->
     <header>
-        <h1>Certificats RH & Gestion</h1>
+        <div class="header-left">
+            <h1>Certificats RH & Gestion<br>Thomas Guy Vernin</h1>
+        </div>
+        <img id="header-image" src="images/photo_thomas_vernin.jpg" alt="Photo Thomas Vernin">
+    </header>
+
+    <!-- Catégories des sous-domaines et filtres (en dehors de l'en-tête) -->
+    <section class="filters-section">
+        <h2>Catégories des sous-domaines</h2>
         <div class="filters">
             <button class="filter-btn" onclick="filterCards('all')">Tous</button>
             <button class="filter-btn" onclick="filterCards('rh')">RH</button>
             <button class="filter-btn" onclick="filterCards('comptabilite')">Comptabilité</button>
             <button class="filter-btn" onclick="filterCards('gestionnaire')">Gestionnaires de Paie</button>
         </div>
-    </header>
+    </section>
 
+    <!-- Section des cartes -->
     <section id="cards-container">
         <!-- Carte RH -->
         <div class="card rh">
-            <h3>Certificat RH</h3>
+            <h3>RH</h3>
             <p>Description du certificat RH...</p>
             <button class="download-btn">Télécharger le PDF</button>
             <button class="competences-btn" onclick="showCompetences('popup-rh')">Compétences</button>
@@ -29,7 +39,7 @@
 
         <!-- Carte Comptabilité -->
         <div class="card comptabilite">
-            <h3>Certificat Comptabilité</h3>
+            <h3>Comptabilité</h3>
             <p>Description du certificat Comptabilité...</p>
             <button class="download-btn">Télécharger le PDF</button>
             <button class="competences-btn" onclick="showCompetences('popup-comptabilite')">Compétences</button>
@@ -37,7 +47,7 @@
 
         <!-- Carte Gestionnaire -->
         <div class="card gestionnaire">
-            <h3>Certificat Gestionnaire de Paie</h3>
+            <h3>Gestionnaire de Paie</h3>
             <p>Description du certificat Gestionnaire de Paie...</p>
             <button class="download-btn">Télécharger le PDF</button>
             <button class="competences-btn" onclick="showCompetences('popup-gestionnaire')">Compétences</button>
@@ -86,3 +96,4 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+
