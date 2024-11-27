@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificats RH & Gestion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Certificats RH & Gestion</h1>
+        <div class="filters">
+            <button class="filter-btn" onclick="filterCards('all')">Tous</button>
+            <button class="filter-btn" onclick="filterCards('rh')">RH</button>
+            <button class="filter-btn" onclick="filterCards('comptabilite')">Comptabilité</button>
+            <button class="filter-btn" onclick="filterCards('gestionnaire')">Gestionnaires de Paie</button>
+        </div>
+    </header>
+
+    <section id="cards-container">
+        <!-- Carte RH -->
+        <div class="card rh">
+            <h3>Certificat RH</h3>
+            <p>Description du certificat RH...</p>
+            <button class="download-btn">Télécharger le PDF</button>
+            <button class="competences-btn" onclick="showCompetences('popup-rh')">Compétences</button>
+        </div>
+
+        <!-- Carte Comptabilité -->
+        <div class="card comptabilite">
+            <h3>Certificat Comptabilité</h3>
+            <p>Description du certificat Comptabilité...</p>
+            <button class="download-btn">Télécharger le PDF</button>
+            <button class="competences-btn" onclick="showCompetences('popup-comptabilite')">Compétences</button>
+        </div>
+
+        <!-- Carte Gestionnaire -->
+        <div class="card gestionnaire">
+            <h3>Certificat Gestionnaire de Paie</h3>
+            <p>Description du certificat Gestionnaire de Paie...</p>
+            <button class="download-btn">Télécharger le PDF</button>
+            <button class="competences-btn" onclick="showCompetences('popup-gestionnaire')">Compétences</button>
+        </div>
+    </section>
+
+    <!-- Popup RH -->
+    <div id="popup-rh" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-rh')">&times;</span>
+            <h2>Compétences Certificat RH</h2>
+            <ul>
+                <li>Recrutement</li>
+                <li>Gestion des conflits</li>
+                <li>Communication</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Popup Comptabilité -->
+    <div id="popup-comptabilite" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-comptabilite')">&times;</span>
+            <h2>Compétences Certificat Comptabilité</h2>
+            <ul>
+                <li>Comptabilité générale</li>
+                <li>Analyse financière</li>
+                <li>Fiscalité</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Popup Gestionnaire -->
+    <div id="popup-gestionnaire" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-gestionnaire')">&times;</span>
+            <h2>Compétences Certificat Gestionnaire de Paie</h2>
+            <ul>
+                <li>Gestion de la paie</li>
+                <li>Législation sociale</li>
+                <li>Management d’équipe</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
