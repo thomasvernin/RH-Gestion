@@ -26,48 +26,73 @@
         </div>
     </section>
 
-    <!-- Section des cartes -->
     <section id="cards-container">
-        <!-- Carte RH -->
-        <div class="card rh">
-            <h3>RH</h3>
+        <!-- RH -->
+        <div class="card rh card-1">
+            <h3>RH #1</h3>
             <p> Délivré par : Openclassrooms </p>
             <button class="download-btn">Télécharger le PDF</button>
-            <button class="competences-btn" onclick="showCompetences('popup-rh')">Compétences</button>
+            <button class="competences-btn" onclick="showCompetences('popup-rh-1')">Compétences</button>
         </div>
 
-        <!-- Carte Comptabilité -->
-        <div class="card comptabilite">
-            <h3>Comptabilité</h3>
+        <div class="card rh card-2">
+            <h3>RH #2</h3>
+            <p> Délivré par : Openclassrooms </p>
+            <button class="download-btn">Télécharger le PDF</button>
+            <button class="competences-btn" onclick="showCompetences('popup-rh-2')">Compétences</button>
+        </div>
+
+        <!-- Carte Comptabilité  -->
+        <div class="card comptabilite card-1">
+            <h3>Comptabilité #1</h3>
             <p> Délivré par : Openclassrooms</p>
             <button class="download-btn">Télécharger le PDF</button>
-            <button class="competences-btn" onclick="showCompetences('popup-comptabilite')">Compétences</button>
+            <button class="competences-btn" onclick="showCompetences('popup-comptabilite-1')">Compétences</button>
+        </div>
+
+        <div class="card comptabilite card-2">
+            <h3>Comptabilité #2</h3>
+            <p> Délivré par : Openclassrooms</p>
+            <button class="download-btn">Télécharger le PDF</button>
+            <button class="competences-btn" onclick="showCompetences('popup-comptabilite-2')">Compétences</button>
         </div>
 
         <!-- Carte Gestionnaire -->
-        <div class="card gestionnaire">
-            <h3>Gestionnaire de Paie</h3>
+        <div class="card gestionnaire card-1">
+            <h3>Gestionnaire de Paie #1</h3>
             <p> Délivré par : Openclassrooms </p>
             <button class="download-btn">Télécharger le PDF</button>
-            <button class="competences-btn" onclick="showCompetences('popup-gestionnaire')">Compétences</button>
+            <button class="competences-btn" onclick="showCompetences('popup-gestionnaire-1')">Compétences</button>
+        </div>
+
+        <div class="card gestionnaire card-2">
+            <h3>Gestionnaire de Paie #2</h3>
+            <p> Délivré par : Openclassrooms </p>
+            <button class="download-btn">Télécharger le PDF</button>
+            <button class="competences-btn" onclick="showCompetences('popup-gestionnaire-2')">Compétences</button>
         </div>
 
         <!-- Carte bureautique -->
-        <div class="card bureautique">
-            <h3> Maîtrisez Excel </h3>
+        <div class="card bureautique card-1">
+            <h3><i class="fas fa-graduation-cap"></i> Maîtrisez Excel #1</h3>
             <p> Délivré par : Openclassrooms </p>
             <button class="download-btn" onclick="window.open('https://drive.google.com/file/d/1qrsQXhaOD-LRPvRjHKrFUIKMhPYDQ7l4/view?usp=sharing', '_blank')">Télécharger le PDF</button>
-            <button class="competences-btn" onclick="showCompetences('popup-bureautique')">Compétences</button>
+            <button class="competences-btn" onclick="showCompetences('popup-bureautique-1')">Compétences</button>
         </div>
 
-
+        <div class="card bureautique card-2">
+            <h3><i class="fas fa-graduation-cap"></i> Maîtrisez Excel #2</h3>
+            <p> Délivré par : Openclassrooms </p>
+            <button class="download-btn">Télécharger le PDF</button>
+            <button class="competences-btn" onclick="showCompetences('popup-bureautique-2')">Compétences</button>
+        </div>
     </section>
 
-    <!-- Popup RH -->
-    <div id="popup-rh" class="popup">
+    <!-- Popup RH  -->
+    <div id="popup-rh-1" class="popup">
         <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('popup-rh')">&times;</span>
-            <h2>Compétences Certificat RH</h2>
+            <span class="close-btn" onclick="closePopup('popup-rh-1')">&times;</span>
+            <h2>Compétences Certificat RH #1</h2>
             <ul>
                 <li>Recrutement</li>
                 <li>Gestion des conflits</li>
@@ -76,11 +101,23 @@
         </div>
     </div>
 
-    <!-- Popup Comptabilité -->
-    <div id="popup-comptabilite" class="popup">
+    <div id="popup-rh-2" class="popup">
         <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('popup-comptabilite')">&times;</span>
-            <h2>Compétences Certificat Comptabilité</h2>
+            <span class="close-btn" onclick="closePopup('popup-rh-2')">&times;</span>
+            <h2>Compétences Certificat RH #2</h2>
+            <ul>
+                <li>Recrutement avancé</li>
+                <li>Développement du leadership</li>
+                <li>Stratégie RH</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Popup Comptabilité -->
+    <div id="popup-comptabilite-1" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-comptabilite-1')">&times;</span>
+            <h2>Compétences Certificat Comptabilité #1</h2>
             <ul>
                 <li>Comptabilité générale</li>
                 <li>Analyse financière</li>
@@ -89,11 +126,23 @@
         </div>
     </div>
 
-    <!-- Popup Gestionnaire -->
-    <div id="popup-gestionnaire" class="popup">
+    <div id="popup-comptabilite-2" class="popup">
         <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('popup-gestionnaire')">&times;</span>
-            <h2>Compétences Certificat Gestionnaire de Paie</h2>
+            <span class="close-btn" onclick="closePopup('popup-comptabilite-2')">&times;</span>
+            <h2>Compétences Certificat Comptabilité #2</h2>
+            <ul>
+                <li>Audit comptable</li>
+                <li>Gestion budgétaire</li>
+                <li>Fiscalité avancée</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Popup Gestionnaire  -->
+    <div id="popup-gestionnaire-1" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-gestionnaire-1')">&times;</span>
+            <h2>Compétences Certificat Gestionnaire de Paie #1</h2>
             <ul>
                 <li>Gestion de la paie</li>
                 <li>Législation sociale</li>
@@ -102,11 +151,23 @@
         </div>
     </div>
 
-    <!-- Popup Bureautique -->
-    <div id="popup-bureautique" class="popup">
+    <div id="popup-gestionnaire-2" class="popup">
         <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('popup-bureautique')">&times;</span>
-            <h2><i class="fas fa-graduation-cap"></i> Maîtrisez Excel</h2>
+            <span class="close-btn" onclick="closePopup('popup-gestionnaire-2')">&times;</span>
+            <h2>Compétences Certificat Gestionnaire de Paie #2</h2>
+            <ul>
+                <li>Gestion avancée de la paie</li>
+                <li>Optimisation des coûts</li>
+                <li>Responsabilité sociale</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Popup Bureautique -->
+    <div id="popup-bureautique-1" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-bureautique-1')">&times;</span>
+            <h2>Compétences Certificat Bureautique #1</h2>
             <ul>
                 <li>Prendre en main un fichier Excel</li>
                 <li>Mettre en page un fichier Excel</li>
@@ -115,10 +176,19 @@
         </div>
     </div>
 
+    <div id="popup-bureautique-2" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-bureautique-2')">&times;</span>
+            <h2>Compétences Certificat Bureautique #2</h2>
+            <ul>
+                <li>Calculs avancés avec Excel</li>
+                <li>Création de graphiques Excel</li>
+                <li>Automatisation avec VBA</li>
+            </ul>
+        </div>
+    </div>
 
     <script src="scripts.js"></script>
 </body>
-
-
 </html>
 
