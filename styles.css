@@ -9,7 +9,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; 
-    padding: 20px;
+    padding: 60px;
     background-color: white;
 }
 
@@ -23,13 +23,13 @@ header {
     width: 80px;
     height: auto;
     border-radius: 60%;
-    margin-right: 20px;
+    margin-right: 0px;
 }
 
 h1 {
     margin: 0;
     color: rgb(37, 37, 37);
-    font-size: 24px;
+    font-size: 34px;
 }
 
 .filters-section {
@@ -41,12 +41,14 @@ h2 {
     margin: 0 0 10px 0;
     color: rgb(90, 89, 89);
     font-size: 20px;
+    margin-left: 20px;
 }
 
 .filters {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap; 
+    margin-left: 10px;
 }
 
 .filter-btn {
@@ -186,8 +188,11 @@ ul li {
 @media (max-width: 768px) {
     /* Header */
     header {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     #header-image {
@@ -208,30 +213,43 @@ ul li {
 
     h2 {
         font-size: 18px;
+        text-align: center;
     }
 
     .filters {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        align-items: center;
     }
 
     .filter-btn {
         margin: 8px;
         padding: 12px 15px;
         font-size: 14px;
+        text-align: center;
     }
 
     #cards-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .card {
         width: 80%;
+        margin: 10px auto;
+        text-align: center;
     }
 
     .popup-content {
         width: 90%;
-        height: auto; 
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -239,7 +257,11 @@ ul li {
 @media (max-width: 480px) {
     /* Header */
     header {
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
     }
 
     #header-image {
@@ -248,43 +270,50 @@ ul li {
 
     h1 {
         font-size: 18px;
+        text-align: center;
     }
 
     h2 {
         font-size: 16px;
+        text-align: center;
     }
 
     .filters {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap; /* Permet d'aller à la ligne si nécessaire */
+        justify-content: center; /* Centre horizontalement les filtres */
+        gap: 6px; /* Ajoute de l'espacement entre les filtres */
     }
 
     .filter-btn {
-        margin: 6px;
-        padding: 10px 15px;
-        font-size: 12px;
+        margin: 0; /* Supprime les marges */
+        padding: 8px 12px; /* Ajuste la taille des boutons */
+        font-size: 12px; /* Réduit légèrement la taille du texte */
+        text-align: center;
     }
 
     #cards-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .card {
         width: 90%;
         padding: 20px;
+        margin: 10px auto;
+        text-align: center;
     }
 
     .popup-content {
         width: 100%;
-        max-width: 400px; 
-        height: auto; 
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
-
-
-
-
-
-
-
