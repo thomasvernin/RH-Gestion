@@ -30,6 +30,7 @@ h1 {
     margin: 0;
     color: rgb(37, 37, 37);
     font-size: 34px;
+    text-align: center;
 }
 
 .filters-section {
@@ -251,6 +252,11 @@ ul li {
         flex-direction: column;
         align-items: center;
     }
+
+    .popup-content h2 {
+        margin-top: 20px;
+        text-align: center; /* Centre spécifiquement le titre */
+    }
 }
 
 /* Mobile (max-width: 480px) */
@@ -300,20 +306,17 @@ ul li {
     }
 
     .card {
-        width: 90%;
-        padding: 20px;
+        width: 100%;
+        padding: 0px;
         margin: 10px auto;
         text-align: center;
     }
 
     .popup-content {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        width: 95%; /* Presque plein écran, mais avec marges */
+        max-width: 90%; /* Largeur maximale ajustée */
+        max-height: 75vh; /* Réduit la hauteur pour mobile */
+        padding: 10px; /* Réduit le padding */
     }
+
 }
